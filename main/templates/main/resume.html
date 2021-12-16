@@ -1,0 +1,349 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+
+<div id="main" class="site-main">
+
+    <!-- primary -->
+    <div id="primary" class="content-area">
+
+        <!-- site-content -->
+        <div id="content" class="site-content" role="main"> <!-- post-slider -->
+
+          <div class="layout-medium"> <!-- .hentry -->
+              <article class="hentry">
+                  <!-- .entry-header -->
+                <header class="entry-header">
+                    <h1 class="entry-title">About Me</h1>
+                </header>
+                <!-- .entry-header -->
+                <!-- .entry-content -->
+                <div class="entry-content">
+
+                    <p>
+                        <img src="{{me.userprofile.avatar.url}}" alt="profile photo">
+                    </p>
+
+                    <h2 class="section-title center">WHO IS THIS GUY?</h2>
+
+                    <p>Albert Einstein was a theoretical physicist who developed the general theory of relativity, effecting a revolution in physics.For this achievement, Einstein is often regarded as the father of modern physics and the most influential physicist of the 20th century. While best known for his mass–energy equivalence formula E = mc2 (which has been dubbed "the world's most famous equation"), he received the 1921 Nobel Prize in Physics "for his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect". The latter was pivotal in establishing quantum theory within physics.</p>
+
+
+                    <h2 class="section-title center">WHAT HE DOES FOR A LIVING</h2>
+
+                    <!-- row -->
+                    <div class="row">
+
+                        <!-- column 6/12 -->
+                        <div class="col-sm-6 col-lg-3">
+
+                            <!-- service -->
+                            <div class="service">
+                                <i class="pw-icon-brush"></i>
+                                <h4>Instructor</h4>
+                                <p>I design super cool websites. It is a long established fact that a reader will be distracted by the readable content.</p>
+                            </div>
+                            <!-- service -->
+
+                        </div>
+                        <!-- column 6/12 -->
+
+                        <!-- column 6/12 -->
+                        <div class="col-sm-6 col-lg-3">
+
+                            <!-- service -->
+                            <div class="service">
+                                <i class="pw-icon-camera"></i>
+                                <h4>Content Writer</h4>
+                                <p>I can design beautiful type faces for both digital and print media. It is a long established fact that a reader will be distracted.</p>
+                            </div>
+                            <!-- service -->
+
+                        </div>
+                        <!-- column 6/12 -->
+
+                        <!-- column 6/12 -->
+                        <div class="col-sm-6 col-lg-3">
+
+                            <!-- service -->
+                            <div class="service">
+                                <i class="pw-icon-beaker"></i>
+                                <h4>Web Development</h4>
+                                <p>I write about web design. It is a long established fact that a reader will be distracted by the readable content.</p>
+                            </div>
+                            <!-- service -->
+
+                        </div>
+                        <!-- column 6/12 -->
+
+                        <!-- column 6/12 -->
+                        <div class="col-sm-6 col-lg-3">
+
+                            <!-- service -->
+                            <div class="service">
+                                <i class="pw-icon-music"></i>
+                                <h4>Music Composer</h4>
+                                <p>I have strong project management skills. It is a long established fact that a reader will be distracted.</p>
+                            </div>
+                            <!-- service -->
+
+                        </div>
+                        <!-- column 6/12 -->
+
+                    </div>
+                    <!-- row -->
+
+
+                </div>
+                <!-- .entry-content -->
+
+
+                <h2 class="section-title center">His Resume</h2>
+                <section>
+                  <div class="bannerSection">
+                    <div class="container">
+                      <div class="row g-4 g-md-3 align-items-center">
+                        <div class="col-md-auto order-md-last">
+                          <div class="bannerUserImg">
+                            <img src="{{me.userprofile.avatar.url}}" alt="{{me.first_name|title}} {{me.last_name|title}} avatar">
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <div class="bannerContent">
+                            <h1 class="xlTitle pb-3">Hello World!</h1>
+                            <p>{{me.userprofile.bio}}</p>
+                            <div class="bannerBtnCol">
+                              <div class="row">
+                                <div class="col-auto">
+                                  <p><a download href="{{me.userprofile.cv.url}}" class="button"><i class="pw-icon-doc-text"></i>Download Resume</a></p>
+                                </div>
+                                <div class="col-auto">
+                                  <p><a download href="{% url 'main:contact' %}" class="button"><i class="pw-icon-comment"></i>Contact Me</a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                  <!-- .entry-content -->
+                  <div class="entry-content">
+
+                      <!-- row -->
+                      <div class="row">
+
+
+                          <!-- col 6/12 -->
+                          <div class="col-sm-7">
+
+                              <!-- timeline -->
+                              <div class="timeline">
+
+                                  <div class="event">
+                                      <h2>WORK HISTORY</h2>
+                                      <i class="pw-icon-bookmark-empty"></i>
+                                  </div>
+
+                                  <div class="event current">
+                                      <span class="date">Sep 2020 - Current</span>
+                                      <h4>Full Stack Web Developer</h4>
+                                      <h5>EF Network LTD</h5>
+                                      <p>I currently work for EF Network as a software developer and technical support staff. I create usable web interfaces, back end coding of business logic and QA testing. I love what i do.</p>
+                                  </div>
+
+                                  <div class="event">
+                                      <span class="date">2019 - Current</span>
+                                      <h4>Full Stack Web Developer</h4>
+                                      <h5>Christ Family International Churches</h5>
+                                      <p>A member of the development team. I create usable web interfaces and back end logic for the website.</p>
+                                  </div>
+
+                                  <div class="event">
+                                      <span class="date">Nov 2017 - Sep 2020</span>
+                                      <h4>Lecturer/Technical Instructor/Ag HOD Computer Science</h4>
+                                      <h5>Gboko Polytechnic</h5>
+                                      <p>I worked as an instructor in the department of Computer Science at Gboko Polytechnic. I loved every moment teaching students how to code and creating a modern syllabus for my department.</p>
+                                  </div>
+
+                                  <div class="event">
+                                      <h2>EDUCATION</h2>
+                                      <i class="pw-icon-graduation-cap"></i>
+                                  </div>
+
+                                  <div class="event">
+                                      <span class="date">2006</span>
+                                      <h4>WAEC/NECO</h4>
+                                      <h5>W.M Bristow Secondary School</h5>
+                                      <p>I graduated from secondary school and wrote my S.S.C.E examinations here.</p>
+                                  </div>
+
+
+                                  <div class="event">
+                                      <span class="date">2014</span>
+                                      <h4>B.Sc Computer Science</h4>
+                                      <h5>Universite D'Abomay Calavi</h5>
+                                      <p>I got my Bachelors Degree here in Computer Science. I had a major interest in cyber security.</p>
+                                  </div>
+
+                                  <div class="event">
+                                      <span class="date">Currently</span>
+                                      <h4>M.Sc Computer Science (Pending)</h4>
+                                      <h5>Federal University of Agriculture, Makurdi</h5>
+                                      <p>I am currently working on this academic goal.</p>
+                                  </div>
+
+                              </div>
+                              <!-- timeline -->
+                              <div class="bannerBtnCol">
+                                  <div class="row">
+                                    <div class="col-auto">
+                                      <p><a download href="{{me.userprofile.cv.url}}" class="button"><i class="pw-icon-doc-text"></i>Download Resume</a></p>
+                                    </div>
+                                    <div class="col-auto">
+                                      <p><a href="#" class="button"><i class="pw-icon-linkedin-squared"></i>My LinkedIn Profile</a></p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- col 6/12 -->
+
+
+
+                          <!-- col 6/12 -->
+                          <div class="col-sm-5">
+
+                              <h2 class="section-title">DEVELOPER SKILLS</h2>
+
+                              <!-- DEV SKILLS -->
+                              <div class="skillset">
+                                  {% for sk in me.userprofile.skills.all %}
+                                  {% if sk.is_key_skill %}
+                                  <div class="skill-unit">
+                                      <h4>{{sk.name}}</h4>
+                                      <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{sk.score}}%; background-color: #C9B69B;" aria-valuenow="{{sk.score}}" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                  </div>
+                                  {% endif %}
+                                  {% endfor %}
+
+
+                              </div>
+                              <!-- DEV SKILLS -->
+
+                              <!-- DESIGN SKILLS -->
+                              <h2 class="section-title">KEY SKILLS</h2>
+
+                              <div class="skillset">
+                                  {% for sk in me.userprofile.skills.all %}
+                                  {% if sk.is_key_skill %}
+                                  <!-- .skill-unit -->
+                                  <div class="skill-unit">
+                                      <h4>{{sk.name}}</h4>
+                                      <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{sk.score}}%; background-color: #C9B69B;" aria-valuenow="{{sk.score}}" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                  </div>
+                                  <!-- .skill-unit -->
+                                  {% endif %}
+                                  {% endfor %}
+                                  <!-- DESIGN SKILLS -->
+
+                              </div>
+                              <!-- DESIGN SKILLS -->
+
+
+
+                              <h2 class="section-title">TESTIMONIALS</h2>
+
+                              <!-- testo-group -->
+                              <div class="testo-group">
+                                  <!-- Testimonial -->
+                                  {% for t in testimonials %}
+                                  {% if t.is_active %}
+                                  <div class="testo">
+                                      <img src="{{t.thumbnail.url}}" alt="{{t.name}}">
+                                      <h4>{{t.name}}
+                                          <span>{{t.role}}</span>
+                                      </h4>
+                                      <p>{{t.quote}}</p>
+
+                                  </div>
+                                  {% endif %}
+                                  {% endfor %}
+                                  <!-- Testimonial -->
+
+                              </div>
+                              <!-- testo-group -->
+
+                          </div>
+                          <!-- col 6/12 -->
+
+
+                      </div>
+                      <!-- row -->
+
+
+                    <h2 class="section-title center">He's a social guy</h2>
+                    <!-- SOCIAL -->
+                    <ul class="social">
+                        <li><a class="facebook" href="https://www.facebook.com/superluey"></a></li>
+                        <li><a class="twitter" href="https://www.twitter.com/superluey"></a></li>
+                        <li><a class="google-plus" href="mailto:biggestluey@gmail.com"></a></li>
+                        <li><a class="linkedin" href="https://www.linkedin.com/in/lexx-lutor"></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/superluey"></a></li>
+                        <li><a class="github" href="https://www.github.com/lexxluey"></a></li>
+                    </ul>
+                    <!-- SOCIAL -->
+
+                  </div>
+                  <!-- .entry-content -->
+
+
+              </article>
+              <!-- .hentry -->
+          </div>
+
+        </div>
+        <!-- site-content -->
+
+    </div>
+    <!-- primary -->
+</div>
+{% endblock %}
+<!-- ================================
+End Content
+================================= -->

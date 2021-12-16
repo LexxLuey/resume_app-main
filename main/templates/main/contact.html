@@ -1,0 +1,169 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+
+
+<!-- site-main -->
+<div class="lightBg">
+<div id="main" class="site-main">
+
+
+
+
+    <!-- primary -->
+    <div id="primary" class="content-area">
+
+        <!-- site-content -->
+        <div id="content" class="site-content" role="main"> <!-- layout-fixed -->
+            <div class="layout-fixed"> <!-- .hentry -->
+
+                    <article class="hentry page">
+
+
+
+                    <header class="entry-header">
+                        <h1 class="entry-title">Contact Me</h1>
+                    </header>
+
+
+                    <!-- .entry-content -->
+                    <div class="entry-content">
+
+                        <h3 class="section-title">I am a social guy :)</h3>
+
+                        <!-- SOCIAL -->
+                        <ul class="social">
+                            <li><a class="facebook" href="#"></a></li>
+                            <li><a class="twitter" href="#"></a></li>
+                            <li><a class="linkedin" href="#"></a></li>
+                            <li><a class="google-plus" href="#"></a></li>
+                            <li><a class="pinterest" href="#"></a></li>
+                            <li><a class="github" href="#"></a></li>
+                            <li><a class="dribbble" href="#"></a></li>
+                            <li><a class="instagram" href="#"></a></li>
+                            <li><a class="lastfm" href="#"></a></li>
+                            <li><a class="vine" href="#"></a></li>
+                            <!--<li><a class="rss" href="#"></a></li>
+                            <li><a class="behance" href="#"></a></li>
+                            <li><a class="vimeo" href="#"></a></li>
+                            <li><a class="forrst" href="#"></a></li>
+                            <li><a class="skype" href="#"></a></li>
+                            <li><a class="picasa" href="#"></a></li>
+                            <li><a class="youtube" href="#"></a></li>
+                            <li><a class="flickr" href="#"></a></li>
+                            <li><a class="tumblr" href="#"></a></li>
+                            <li><a class="blogger" href="#"></a></li>
+                            <li><a class="delicious" href="#"></a></li>
+                            <li><a class="digg" href="#"></a></li>
+                            <li><a class="friendfeed" href="#"></a></li>
+                            <li><a class="wordpress" href="#"></a></li>
+                            <li><a class="stack-overflow" href="#"></a></li>
+                            <li><a class="foursquare" href="#"></a></li>
+                            <li><a class="xing" href="#"></a></li>
+                            <li><a class="weibo" href="#"></a></li>
+                            <li><a class="soundcloud" href="#"></a></li>
+                            <li><a class="fivehundredpx" href="#"></a></li>
+                            <li><a class="slideshare" href="#"></a></li>-->
+                        </ul>
+                        <!-- SOCIAL -->
+
+                        <h3 class="section-title">Or mail me!</h3>
+
+                          <!-- .contact-form -->
+                          <div class="contact-form">
+
+                              <form id="contact-form" class="validate-form" method="POST" action="/contact/">
+                                {% csrf_token %}
+                                <!-- enter mail subject here -->
+
+                                <p>
+                                  <label for="name">NAME</label>
+                                  {{form.name}}
+                                </p>
+
+                                <p>
+                                  <label for="email">EMAIL</label>
+                                  {{form.email}}
+                                </p>
+
+                                <p class="antispam">Leave this empty if you are a human :
+                                    <br /><input name="url" />
+                                </p>
+
+                                <p>
+                                  <label for="message">MESSAGE</label>
+                                  {{form.message}}
+                                </p>
+
+                                <p>
+                                  <button class="submit button" type="submit" value="Submit"><span class="submit-label">Submit</span><span class="submit-status"></span></button>
+                                </p>
+
+                              </form>
+
+                          </div>
+                          <!-- .contact-form -->
+
+
+                    </div>
+                    <!-- .entry-content -->
+
+
+                </article>
+                <!-- .hentry -->
+
+
+
+            </div>
+            <!-- layout-fixed -->
+
+
+
+
+        </div>
+        <!-- site-content -->
+
+    </div>
+    <!-- primary -->
+
+
+
+
+</div>
+</div>
+<!-- site-main -->
+<!-- ================================
+End Content
+================================= -->
+{%endblock%}
+    

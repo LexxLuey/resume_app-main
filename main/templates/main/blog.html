@@ -1,0 +1,163 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+
+
+<!-- site-main -->
+<div id="main" class="site-main">
+
+    <!-- primary -->
+    <div id="primary" class="content-area">
+
+        <!-- site-content -->
+        <div id="content" class="site-content" role="main"> <!-- layout-medium -->
+            <div class="layout-medium"> <!-- entry-header -->
+                <header class="entry-header">
+                    <h1 class="entry-title">LATEST STORIES</h1>
+                </header>
+                <!-- entry-header -->
+
+                <!-- BLOG MASONRY -->
+                <div class="masonry blog-masonry" data-layout="masonry" data-item-width="340">
+
+                    <!-- .hentry -->
+                    {% for obj in object_list %}
+                    <article class="hentry post">
+
+                        <!-- .featured-image -->
+                        <div class="featured-image">
+                            <a href="{% url 'main:blog' slug=obj.slug %}"><img src="{{obj.image.url}}" alt="blog-image"></a>
+                        </div>
+                        <!-- .featured-image -->
+
+
+                        <!-- .entry-header -->
+                        <header class="entry-header">
+
+                            <!-- .entry-title -->
+                            <h1 class="entry-title"><a href="{% url 'main:blog' slug=obj.slug %}">{{obj.name}}</a></h1>
+
+
+                            <!-- .entry-meta -->
+                            <div class="entry-meta">
+                                <span class="entry-date">
+                                    <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{obj.timestamp.date}}</time>
+                                </span>
+                                <span class="cat-links">
+                                    <a href="#" title="View all posts in Adventure" rel="category tag">Nature</a>
+                                </span>
+                            </div>
+                            <!-- .entry-meta -->
+
+
+                        </header>
+                        <!-- .entry-header -->
+
+                        <!-- .entry-content -->
+                        <div class="entry-content">
+
+                            <p>{{obj.description}}
+                                <span class="more">
+                                    <a href="{% url 'main:blog' slug=obj.slug %}" class="more-link">Continue reading <span class="meta-nav">→</span></a>
+                                </span>
+                            </p>
+
+                        </div>
+                        <!-- .entry-content -->
+
+
+                    </article>
+                    {% endfor %}
+                    <!-- .hentry -->
+
+                </div>
+                <!-- BLOG MASONRY -->
+
+
+
+
+                <!-- .navigation .pagination -->
+                <nav class="navigation pagination" role="navigation">
+
+                    <h2 class="screen-reader-text">Posts navigation</h2>
+
+                    <!-- .nav-links -->
+                    <div class="nav-links">
+                        {% if page_obj.has_previous %}
+                        <a class="page-numbers prev" href="?page={{ page_obj.previous_page_number }}">Prev</a>
+                        <a class="page-numbers" href="?page=1"><span class="meta-nav screen-reader-text">Page </span>1</a>
+                        <span class="page-numbers dots">…</span>
+                        <a class="page-numbers" href="?page={{ page_obj.previous_page_number }}"><span class="meta-nav screen-reader-text">Page </span>?page={{ page_obj.previous_page_number }}</a>
+                        {% else %}
+                        <a class="page-numbers prev disabled" href="#">Prev</a>
+                        <span class="page-numbers current"><span class="meta-nav screen-reader-text">Page </span>{{ page_obj.number }}</span>
+                        {% endif %}
+                        {% if page_obj.has_next %}
+                        <a class="page-numbers" href="?page={{ page_obj.next_page_number }}"><span class="meta-nav screen-reader-text">Page </span>{{ page_obj.next_page_number }}</a>
+                        <span class="page-numbers dots">…</span>
+                        <a class="page-numbers" href="?page={{ page_obj.paginator.num_pages }}"><span class="meta-nav screen-reader-text">Page </span>?page={{ page_obj.paginator.num_pages }}</a>
+                        <a class="page-numbers next" href="?page={{ page_obj.next_page_number }}">Next</a>
+                        {% else %}
+                         <a class="page-numbers prev disabled" href="#">Next</a>
+                        {% endif %}
+                    </div>
+                    <!-- .nav-links -->
+
+                </nav>
+                <!-- .navigation .pagination -->
+
+
+        </div>
+            <!-- layout-medium -->
+
+
+
+
+
+
+        </div>
+        <!-- site-content -->
+
+    </div>
+    <!-- primary -->
+
+
+
+
+</div>
+<!-- site-main -->
+<!-- ================================
+End Content
+================================= -->
+{%endblock%} 
+    

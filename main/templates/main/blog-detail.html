@@ -1,0 +1,241 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+
+
+<!-- site-main -->
+<div id="main" class="site-main">
+
+    <!-- primary -->
+    <div id="primary" class="content-area">
+
+        <!-- site-content -->
+        <div id="content" class="site-content" role="main"> <!-- layout-fixed -->
+            <div class="layout-fixed"> <!-- .hentry -->
+                    <article class="hentry post">
+
+
+                        <!-- .entry-header -->
+                        <header class="entry-header">
+
+
+                            <!-- .entry-title -->
+                            <h1 class="entry-title">{{object.name|title}}</h1>
+
+
+                            <!-- .entry-meta -->
+                            <div class="entry-meta">
+                                <span class="entry-date">
+                                    <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{object.timestamp.date}}</time>
+                                </span>
+                                <span class="comment-link">
+                                    <a href="#comments">7 Comments</a>
+                                </span>
+                                <span class="read-time"><span class="eta"></span> read</span>
+                                <span class="cat-links">
+                                    <a href="#" title="View all posts in Travel" rel="category tag">Travel</a>
+                                </span>
+                                <!--<span class="edit-link">
+                                    <a class="post-edit-link" href="#">Edit</a>
+                                </span>-->
+                            </div>
+                            <!-- .entry-meta -->
+
+                        </header>
+                        <!-- .entry-header -->
+
+                        <!-- .featured-image -->
+                        <div class="featured-image">
+                            <img src="{{object.image.url}}" alt="blog-image">
+                        </div>
+                        <!-- .featured-image -->
+
+
+
+                        <!-- .entry-content -->
+                        <div class="entry-content">
+
+                            <!--<iframe src="https://player.vimeo.com/video/50315573?color=AB977A&title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+
+                            <!--<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/202812975&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>-->
+
+                            <p class="drop-cap">{{object.body|safe}}</p>
+
+
+
+
+                            <!-- blockquote
+                            <blockquote>Expect the best. Prepare for the worst. Capitalize on what comes.
+                                <cite>Zig Ziglar</cite>
+                            </blockquote>
+                             blockquote -->
+
+                            <!-- blockquote
+                            <blockquote class="alignleft">I am easily satisfied with the very best.
+                                <cite>Winston Churchill</cite>
+                            </blockquote>
+                            blockquote -->
+
+                             <!-- .post-tags
+                             <div class="post-tags tagcloud">
+                                <a href="#" rel="tag">life</a>
+                                <a href="#" rel="tag">mind</a>
+                                <a href="#" rel="tag">think</a>
+                             </div>
+                              .post-tags -->
+
+
+                             <!-- .share-links -->
+                             <div class="share-links">
+
+                                <h3>SHARE THIS</h3>
+
+                                <a rel="nofollow" target="_blank" href="mailto:?subject=I wanted you to see this post&amp;body=Check out this post : url( 'main:blog' slug=obj.slug)" title="Email this post to a friend"><i class="pw-icon-mail"></i></a>
+
+                                <a rel="nofollow" target="_blank" href="http://twitter.com/home?status=Currently reading: 'Sketching Mickey'" title="Share this post with your followers"><i class="pw-icon-twitter"></i></a>
+
+                                <a rel="nofollow" target="_blank" href="http://www.facebook.com/sharer.php?u=http://" title="Share this post on Facebook"><i class="pw-icon-facebook"></i></a>
+
+                                <a rel="nofollow" target="_blank" href="https://plus.google.com/share?url=http://" title="Share this post on Google+"><i class="pw-icon-gplus"></i></a>
+
+                             </div>
+                             <!-- .share-links -->
+
+
+                            <!-- .about-author -->
+                            <aside class="about-author">
+
+                                <h3 class="section-title">WRITTEN BY</h3>
+
+                                <!-- .author-bio -->
+                                <div class="author-bio">
+
+                                    <!-- .author-img -->
+                                    <div class="author-img">
+                                        <a href="#"><img alt="{{object.author|title}}" src="{{me.userprofile.avatar.url}}" class="avatar"></a>
+                                    </div>
+                                    <!-- .author-img -->
+
+                                    <!-- .author-info -->
+                                    <div class="author-info">
+                                        <h4 class="author-name">{{object.author|title}}</h4>
+                                        <p>{{me.userprofile.bio}}</p>
+
+                                        <!-- SOCIAL -->
+                                        <ul class="social">
+                                            <li><a class="facebook" href="#"></a></li>
+                                            <li><a class="instagram" href="#"></a></li>
+                                            <li><a class="twitter" href="#"></a></li>
+                                            <li><a class="dribbble" href="#"></a></li>
+                                            <li><a class="vine" href="#"></a></li>
+                                        </ul>
+                                        <!-- SOCIAL -->
+
+                                    </div>
+                                    <!-- .author-info -->
+
+                                </div>
+                                <!-- .author-bio -->
+
+                            </aside>
+                            <!-- .about-author -->
+
+
+                            <!-- realated-posts
+                            <div class="yarpp-related">
+
+                                <h3>You May Also Like</h3>
+
+                                <div class="yarpp-thumbnails-horizontal">
+
+                                    <a class="yarpp-thumbnail" href="#">
+                                        <span class="yarpp-thumbnail-default">
+                                            <img src="images/blog/01.jpg">
+                                        </span>
+                                        <span class="yarpp-thumbnail-title">There's always light at the end of the tunnel</span>
+                                    </a>
+
+                                    <a class="yarpp-thumbnail" href="#">
+                                        <span class="yarpp-thumbnail-default">
+                                            <img src="images/blog/07.jpg">
+                                        </span>
+                                        <span class="yarpp-thumbnail-title">All In Our Head</span>
+                                    </a>
+
+                                    <a class="yarpp-thumbnail" href="#">
+                                        <span class="yarpp-thumbnail-default">
+                                            <img src="images/blog/04.jpg">
+                                        </span>
+                                        <span class="yarpp-thumbnail-title">Stay Calm And Surf</span>
+                                    </a>
+
+                                </div>
+
+                            </div>
+                             realated-posts -->
+
+
+                        </div>
+                        <!-- .entry-content -->
+
+
+
+                    </article>
+                    <!-- .hentry -->
+
+
+
+
+            </div>
+            <!-- layout-fixed -->
+
+
+
+
+        </div>
+        <!-- site-content -->
+
+    </div>
+    <!-- primary -->
+
+
+
+
+</div>
+<!-- site-main -->
+
+{% endblock %}
+<!-- ================================
+End Content
+================================= -->
+   

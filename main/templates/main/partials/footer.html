@@ -1,0 +1,116 @@
+{% load static %}
+<!-- ================================
+Start Footer
+================================= -->
+<!--<footer>-->
+<!--    <div class="footerCol">-->
+<!--    <div class="container">-->
+<!--        <ul class="socialCol">-->
+<!--        <li><a href="javascript:void(0)"><img src="{% static 'images/fb.svg' %}" alt="..."></a></li>-->
+<!--        <li><a href="javascript:void(0)"><img src="{% static 'images/insta.svg' %}" alt="..."></a></li>-->
+<!--        <li><a href="javascript:void(0)"><img src="{% static 'images/twitter.svg' %}" alt="..."></a></li>-->
+<!--        <li><a href="javascript:void(0)"><img src="{% static 'images/linkedin.svg' %}" alt="..."></a></li>-->
+<!--        </ul>-->
+<!--        <div class="copyrightCol">-->
+<!--        <p>Copyright ©{% now 'Y' %} All rights reserved. Designed by <a href="https://jamesgrangerdesign.co.uk/" target="_blank">James Granger Design</a></p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    </div>-->
+<!--</footer>-->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <!-- layout-medium -->
+    <div class="layout-medium">
+
+        <!-- footer-social -->
+        <div class="footer-social">
+
+            <ul class="social">
+                <li><a class="facebook" href="https://www.facebook.com/superluey"></a></li>
+                <li><a class="twitter" href="https://www.twitter.com/superluey"></a></li>
+                <li><a class="google-plus" href="mailto:biggestluey@gmail.com"></a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/in/lexx-lutor"></a></li>
+                <li><a class="instagram" href="https://www.instagram.com/superluey"></a></li>
+                <li><a class="github" href="https://www.github.com/lexxluey"></a></li>
+            </ul>
+
+        </div>
+        <!-- footer-social -->
+
+        <!-- footer-sidebar -->
+        <div class="footer-sidebar widget-area" role="complementary">
+
+            <!-- widget -->
+            <aside class="widget widget_text">
+              <h3 class="widget-title">About Me</h3>
+              <div class="textwidget">
+                <img src="{{me.userprofile.avatar.url}}" alt="avatar"> <p>{{me.userprofile.bio}}</p>
+              </div>
+            </aside>
+            <!-- widget -->
+
+            <!-- widget -->
+            <aside class="widget widget_tag_cloud">
+              <h3 class="widget-title">Tags</h3>
+              <div class="tagcloud"> <a href="#" title="1 topic" style="font-size: 8pt;">adaptive</a> <a href="#" title="2 topics" style="font-size: 22pt;">design</a> <a href="#" title="1 topic" style="font-size: 8pt;">html</a> <a href="#" title="2 topics" style="font-size: 22pt;">responsive</a> <a href="#" title="2 topics" style="font-size: 22pt;">think</a> <a href="#" title="1 topic" style="font-size: 8pt;">web design</a> <a href="#" title="1 topic" style="font-size: 8pt;">css</a> <a href="#" title="2 topics" style="font-size: 22pt;">animations</a> <a href="#" title="1 topic" style="font-size: 8pt;">layout</a> <a href="#" title="2 topics" style="font-size: 14pt;">mobile</a> <a href="#" title="2 topics" style="font-size: 22pt;">think</a> <a href="#" title="1 topic" style="font-size: 8pt;">typography</a> </div>
+            </aside>
+            <!-- widget -->
+
+            <!-- widget : categories -->
+            <aside class="widget widget_categories">
+              <h3 class="widget-title">Categories</h3>
+              <ul>
+                <li class="cat-item"><a href="#" title="View all posts filed under Nature">Nature</a></li>
+                <li class="cat-item"><a href="#" title="View all posts filed under Life">Life</a></li>
+                <li class="cat-item"><a href="#" title="View all posts filed under Adventure">Adventure</a></li>
+                <li class="cat-item"><a href="#" title="View all posts filed under Freebies">Travel</a></li>
+                <li class="cat-item"><a href="#" title="View all posts filed under Sport">Sport</a></li>
+              </ul>
+            </aside>
+            <!-- widget : categories -->
+
+
+            <!-- widget -->
+            <aside class="widget widget_recent_entries">
+                <h3 class="widget-title">Recent Posts</h3>
+
+                <ul>
+                    {% for b in blogs %}
+                    {% if b.is_active %}
+                    <li><a href="{% url 'main:blog' slug=b.slug %}">{{b.name}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </aside>
+            <!-- widget -->
+
+
+        </div>
+        <!-- footer-sidebar -->
+
+
+    </div>
+    <!-- layout-medium -->
+
+
+    <!-- .site-info -->
+    <div class="site-info">
+
+        <!-- layout-medium -->
+        <div class="layout-medium">
+
+            <p>crafted with <i class="pw-icon-heart"></i> <em>by</em> Pixelwars</p>
+
+        </div>
+        <div class="copyrightCol">
+            <p>Copyright ©{% now 'Y' %} All rights reserved. Designed by <a href="https://jamesgrangerdesign.co.uk/" target="_blank">James Granger Design</a></p>
+        </div>
+        <!-- layout-medium -->
+
+    </div>
+    <!-- .site-info -->
+
+</footer>
+<!-- ================================
+End Footer
+================================= -->

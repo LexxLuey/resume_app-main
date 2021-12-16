@@ -1,0 +1,123 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+<section>
+  <div class="innerPageBannerCol">
+    <div class="container">
+      <div class="row g-4 g-md-3  align-items-center">
+        <div class="col-md-6">
+          <div class="bannerContent">
+            <h1 class="xlTitle pb-md-3">{{object.name}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sectionSpaceSm">
+    <div class="container">
+      {{object.body|safe}}
+    </div>
+  </div>
+</section>
+
+<!-- primary -->
+<div id="primary" class="content-area">
+
+    <!-- site-content -->
+    <div id="content" class="site-content" role="main"> <!-- layout-medium -->
+        <div class="layout-medium"> <!-- .hentry -->
+            <article class="hentry type-portfolio">
+
+
+                <header class="entry-header">
+
+                    <h1 class="entry-title">Read</h1>
+
+                    <!-- HEADER LINKS -->
+                    <ul class="header-links">
+                      <li><a href="{% url 'main:portfolios' %}"><i class="pw-icon-level-up"></i> Back to Portfolio</a></li>
+                    </ul>
+                    <!-- HEADER LINKS -->
+
+                </header>
+
+                <!-- .entry-content -->
+                <div class="entry-content">
+
+                    {{object.body|safe}}
+
+                    <!-- row -->
+                    <div class="row">
+
+                        <!-- column 6/12 -->
+                        <div class="col-sm-6">
+                            <h2 class="section-title">Launch Project</h2>
+                            <p><a class="button" target="_blank" href="{{object.link}}">Launch Project</a></p>
+                        </div>
+                        <!-- column 6/12 -->
+
+
+                    </div>
+                    <!-- row -->
+
+                    <p>
+                        <a href="{{object.link}}"><img src="{{object.image.url}}" alt="image"/></a>
+                    </p>
+
+                </div>
+                <!-- .entry-content -->
+
+
+            </article>
+            <!-- .hentry -->
+        </div>
+        <!-- layout-medium -->
+
+
+
+
+
+
+    </div>
+    <!-- site-content -->
+
+</div>
+<!-- primary -->
+<!-- ================================
+End Content
+================================= -->
+{%endblock%}
+    

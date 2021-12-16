@@ -1,0 +1,272 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+
+<div id="main" class="site-main">
+
+    <!-- primary -->
+    <div id="primary" class="content-area">
+
+        <!-- site-content -->
+        <div id="content" class="site-content" role="main"> <!-- post-slider -->
+            <!--<div class="post-slider owl-carousel" data-items="3" data-loop="false" data-center="false" data-mouse-drag="true" data-nav="false" data-dots="false" data-autoplay="true" data-autoplay-speed="600" data-autoplay-timeout="2000">-->
+            <div class="post-slider owl-carousel" data-items="3" data-loop="true" data-dots="false" data-nav="true" data-nav-prev-text="prev" data-nav-next-text="next">
+
+                <!-- post -->
+                {% for b in blogs %}
+                {% if b.is_active %}
+
+                <div class="post-thumbnail" style="background-image:url({{ b.image.url }});">
+
+                    <!-- .entry-header -->
+                    <header class="entry-header">
+
+                        <!-- .entry-meta -->
+                        <div class="entry-meta">
+                            <span class="cat-links">
+                                <a href="{% url 'main:blog' slug=b.slug %}" rel="category tag">TRAVEL</a>
+                            </span>
+                        </div>
+                        <!-- .entry-meta -->
+
+                        <!-- .entry-title -->
+                        <h1 class="entry-title"><a href="{% url 'main:blog' slug=b.slug %}">{{b.name}}</a></h1>
+                    </header>
+                    <!-- .entry-header -->
+
+                </div>
+                <!-- post -->
+                {% endif %}
+                {% endfor %}
+
+                <!-- post -->
+                <div class="post-thumbnail" style="background-image:url({% static 'brave/images/blog/02.jpg' %});">
+
+                    <!-- .entry-header -->
+                    <header class="entry-header">
+
+                        <!-- .entry-meta -->
+                        <div class="entry-meta">
+                            <span class="cat-links">
+                                <a href="#" rel="category tag">Life</a>
+                            </span>
+                        </div>
+                        <!-- .entry-meta -->
+
+                        <!-- .entry-title -->
+                        <h1 class="entry-title"><a href="blog-single.html">The Life of Stuff</a></h1>
+                    </header>
+                    <!-- .entry-header -->
+
+                </div>
+                <!-- post -->
+
+
+                <!-- post -->
+                <div class="post-thumbnail" style="background-image:url({% static 'brave/images/blog/03.jpg' %});">
+
+                    <!-- .entry-header -->
+                    <header class="entry-header">
+
+                        <!-- .entry-meta -->
+                        <div class="entry-meta">
+                            <span class="cat-links">
+                                <a href="#" rel="category tag">Nature</a>
+                            </span>
+                        </div>
+                        <!-- .entry-meta -->
+
+                        <!-- .entry-title -->
+                        <h1 class="entry-title"><a href="blog-single.html">Cuckoo Events</a></h1>
+                    </header>
+                    <!-- .entry-header -->
+
+                </div>
+                <!-- post -->
+
+                <!-- post -->
+                <div class="post-thumbnail" style="background-image:url({% static 'brave/images/blog/04.jpg' %});">
+
+                    <!-- .entry-header -->
+                    <header class="entry-header">
+
+                        <!-- .entry-meta -->
+                        <div class="entry-meta">
+                            <span class="cat-links">
+                                <a href="#" rel="category tag">Life</a>
+                            </span>
+                        </div>
+                        <!-- .entry-meta -->
+
+                        <!-- .entry-title -->
+                        <h1 class="entry-title"><a href="blog-single.html">Stay Calm And Surf</a></h1>
+                    </header>
+                    <!-- .entry-header -->
+
+                </div>
+                <!-- post -->
+
+                <!-- post -->
+                <div class="post-thumbnail" style="background-image:url({% static 'brave/images/blog/05.jpg' %});">
+
+                    <!-- .entry-header -->
+                    <header class="entry-header">
+
+                        <!-- .entry-meta -->
+                        <div class="entry-meta">
+                            <span class="cat-links">
+                                <a href="#" rel="category tag">Fashion</a>
+                            </span>
+                        </div>
+                        <!-- .entry-meta -->
+
+                        <!-- .entry-title -->
+                        <h1 class="entry-title"><a href="blog-single.html">Becoming a Dragonfly</a></h1>
+                    </header>
+                    <!-- .entry-header -->
+
+                </div>
+                <!-- post -->
+
+            </div>
+            <!-- post-slider -->
+
+
+
+
+            <!-- layout-fixed -->
+            <div class="layout-fixed"> <!-- blog-regular -->
+                <div class="blog-regular">
+
+
+
+                    <!-- .hentry -->
+                    {% for b in blogs %}
+                    {% if b.is_active %}
+                    <article class="hentry post">
+
+                        <!-- .entry-header -->
+                        <header class="entry-header">
+
+
+                            <!-- .entry-title -->
+                            <h1 class="entry-title"><a href="{% url 'main:blog' slug=b.slug %}">{{b.name}}</a></h1>
+
+                            <!-- .entry-meta -->
+                            <div class="entry-meta">
+                                <span class="entry-date">
+                                    <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{b.timestamp.date}}</time>
+                                </span>
+<!--                                <span class="comment-link">-->
+<!--                                    <a href="blog-single.html#comments">7 Comments</a>-->
+<!--                                </span>-->
+                                <span class="read-time"><span class="eta"></span> read</span>
+                                <span class="cat-links">
+                                    <a href="#" title="View all posts in Travel" rel="category tag">Travel</a>
+                                </span>
+                                <!--<span class="edit-link">
+                                    <a class="post-edit-link" href="#">Edit</a>
+                                </span>-->
+                            </div>
+                            <!-- .entry-meta -->
+
+                        </header>
+                        <!-- .entry-header -->
+
+                        <!-- .featured-image -->
+                        <div class="featured-image">
+                            <a href="{% url 'main:blog' slug=b.slug %}">
+                                <img src="{{ b.image.url }}" alt="{{ b.name }}">
+                            </a>
+                        </div>
+                        <!-- .featured-image -->
+
+                        <!-- .entry-content -->
+                        <div class="entry-content">
+                            <p>{{b.description}}</p>
+                            <span class="more">
+                                <a href="{% url 'main:blog' slug=b.slug %}" class="more-link">Continue reading <span class="meta-nav">→</span></a>
+                            </span>
+                        </div>
+                        <!-- .entry-content -->
+
+                    </article>
+                    {% endif %}
+                    {% endfor %}
+                    <!-- .hentry -->
+
+                    <!-- .hentry -->
+                    <article class="hentry post format-quote">
+
+                        <div class="entry-content">
+
+                            <blockquote>A wise man can tell more from a foolish question than a fool can from a wise answer.
+                                <cite>Bruce Lee</cite>
+                            </blockquote>
+
+                        </div>
+
+                    </article>
+                    <!-- .hentry -->
+
+
+                    <!-- post nav -->
+                    <nav class="navigation" role="navigation">
+                        <div class="nav-previous"><a href="{% url 'main:blogs' %}"><span class="meta-nav">←</span> Older posts</a></div>
+                        <!--<div class="nav-next"><a href="#">Newer posts <span class="meta-nav">→</span></a></div>-->
+                    </nav>
+                    <!-- post nav -->
+
+
+
+                </div>
+                <!-- blog-regular -->
+
+
+
+            </div>
+            <!-- layout-fixed -->
+
+
+
+
+        </div>
+        <!-- site-content -->
+
+    </div>
+    <!-- primary -->
+</div>
+{% endblock %}
+<!-- ================================
+End Content
+================================= -->
