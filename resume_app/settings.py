@@ -80,13 +80,32 @@ WSGI_APPLICATION = 'resume_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
+DATABASES = {
+
+    'default': {
+
+        'ENGINE': 'django.db.backends.postgresql',
+
+        'NAME': 'd51ormnh8nktpb',
+
+        'USER': 'vqifyampnrhhlv',
+
+        'PASSWORD': '1b43ee5dce31691a1127cc27e2ae1fdacddc7f84e3a1fd16de302b297c9eb042',
+
+        'HOST': 'ec2-54-159-35-35.compute-1.amazonaws.com',
+
+        'PORT': '5432',
+
+    }
+
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
