@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import django_heroku
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-v8bzoj5)*&_%x-yy7o*z-2$*m1uuo*hbtb(n)%@bboej@%wkox'
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -94,17 +96,17 @@ DATABASES = {
 
     'default': {
 
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': str(os.getenv('ENGINE')),
 
-        'NAME': 'd51ormnh8nktpb',
+        'NAME': str(os.getenv('NAME')),
 
-        'USER': 'vqifyampnrhhlv',
+        'USER': str(os.getenv('USER')),
 
-        'PASSWORD': '1b43ee5dce31691a1127cc27e2ae1fdacddc7f84e3a1fd16de302b297c9eb042',
+        'PASSWORD': str(os.getenv('PASSWORD')),
 
-        'HOST': 'ec2-54-159-35-35.compute-1.amazonaws.com',
+        'HOST': str(os.getenv('HOST')),
 
-        'PORT': '5432',
+        'PORT': str(os.getenv('PORT')),
 
     }
 
