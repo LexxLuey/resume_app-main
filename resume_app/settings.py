@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-v8bzoj5)*&_%x-yy7o*z-2$*m1uuo*hbtb(n)%@bboej@%wkox
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['brave-engine.herokuapp.com']
+ALLOWED_HOSTS = ['https://brave-engine.herokuapp.com']
 
 
 # Application definition
@@ -140,3 +141,5 @@ MEDIA_ROOT = BASE_DIR / "mediafiles"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+
+django_heroku.settings(locals())
