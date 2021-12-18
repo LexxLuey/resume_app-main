@@ -148,7 +148,7 @@ Start Content
                                   <p><a download href="{{me.userprofile.cv.url}}" class="button"><i class="pw-icon-doc-text"></i>Download Resume</a></p>
                                 </div>
                                 <div class="col-auto">
-                                  <p><a download href="{% url 'main:contact' %}" class="button"><i class="pw-icon-comment"></i>Contact Me</a></p>
+                                  <p><a href="{% url 'main:contact' %}" class="button"><i class="pw-icon-comment"></i>Contact Me</a></p>
                                 </div>
                               </div>
                             </div>
@@ -253,9 +253,7 @@ Start Content
                                   {% if sk.is_key_skill %}
                                   <div class="skill-unit">
                                       <h4>{{sk.name}}</h4>
-                                      <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{sk.score}}%; background-color: #C9B69B;" aria-valuenow="{{sk.score}}" aria-valuemin="0" aria-valuemax="100"></div>
-                                      </div>
+
                                   </div>
                                   {% endif %}
                                   {% endfor %}
@@ -273,9 +271,7 @@ Start Content
                                   <!-- .skill-unit -->
                                   <div class="skill-unit">
                                       <h4>{{sk.name}}</h4>
-                                      <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{sk.score}}%; background-color: #C9B69B;" aria-valuenow="{{sk.score}}" aria-valuemin="0" aria-valuemax="100"></div>
-                                      </div>
+
                                   </div>
                                   <!-- .skill-unit -->
                                   {% endif %}
